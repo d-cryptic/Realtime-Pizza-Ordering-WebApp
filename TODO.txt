@@ -15,8 +15,8 @@
 [+] Create Cart age
 	- order summary section
 	- empty cart section
-[] move routes to routes files
-[] Create dedicated controllers
+[+] move routes to routes files
+[+] Create dedicated controllers
 [] Add to cart functionality
 	- connect to mongodb
 	- use connect-mongo for session store
