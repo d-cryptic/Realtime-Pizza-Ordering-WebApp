@@ -5,7 +5,11 @@
 		- ejs express-ejs-layouts
 	- Dev Dependencies
 		- nodemon
+[+] Git setup ad first commit
 [+] Create Express server - create a server.js file
+[+] Install Laravel Mix
+	- setup js and css
+[] Install tailwind css
 [] Create Home page using HTML and CSS
 	- include tailwind css
 [] Create Cart age
@@ -15,3 +19,8 @@
 [] Create Orders view with table for customer and admin
 [] Create Orders single page with status
 [] Create login page with route
+[] Create register page with route
+[] Build register crud
+	- dependencies express flash express-session cookie-parser dotenv
+	- status code article https://www.restapitutorial.com/httpstatuscodes.html  
+	- Database connection, dependencies mongoose
