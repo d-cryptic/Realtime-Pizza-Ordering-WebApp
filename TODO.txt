@@ -1,12 +1,12 @@
-[*] Create Directory Structure
-[] Create a NPM project and install all dependencies
+[+] Create Directory Structure
+[+] Create a NPM project and install all dependencies
 	- Dependencies
 		- express
 		- ejs express-ejs-layouts
 	- Dev Dependencies
 		- nodemon
-[] Create Express server - create a server.js file
-[] Create Hme page using HTML and CSS
+[+] Create Express server - create a server.js file
+[] Create Home page using HTML and CSS
 	- include tailwind css
 [] Create Cart age
 	- order summary section
