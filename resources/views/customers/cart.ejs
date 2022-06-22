@@ -7,7 +7,6 @@
     </div>
     <div class="pizza-list">
       <% for(let pizza of Object.values(session.cart.items)) { %>
-      <%console.log(pizza.item.name)%>
       <div class="flex items-center my-8">
         <img src="/img/<%- pizza.item.image%>" alt="" class="w-24" />
         <div class="flex-1 ml-4">

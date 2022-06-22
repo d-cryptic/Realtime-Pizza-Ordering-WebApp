@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("express-flash");
 const MongodbStore = require("connect-mongo")(session);
+const passport = require("passport");
 
 // Database connection
 const url = process.env.MONGODB_URI;
@@ -28,6 +29,12 @@ let mongoStore = new MongodbStore({
   mongooseConnection: connection,
   collection: "sessions",
 });
+
+// Passport config
+const passportInit = require("./app/config/passport");
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // session config
 app.use(
@@ -51,6 +58,7 @@ app.use((req, res, next) => {
 
 // Assets
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // set template engine
