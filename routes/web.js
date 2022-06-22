@@ -18,7 +18,10 @@ const initRoutes = (app) => {
   app.get("/cart", cartController().index);
   app.post("/update-cart", cartController().update);
 
+  // cusotmer routes
   app.post("/orders", orderController().store);
+
+  app.get("/customer/orders", orderController().index);
 };
 
 module.exports = initRoutes;

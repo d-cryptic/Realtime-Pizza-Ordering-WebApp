@@ -1,4 +1,5 @@
 const Order = require("../../../models/order");
+const moment = require("moment");
 
 const orderController = () => {
   return {
@@ -28,6 +29,14 @@ const orderController = () => {
           req.flash("error", "Something went wrong");
           return res.redirect("/cart");
         });
+    },
+
+    async index(req, res) {
+      const orders = await Order.find({ customerId: req.user._id });
+      res.render("customers/orders", {
+        orders: orders,
+        moment: moment,
+      });
     },
   };
 };
