@@ -30,12 +30,6 @@ let mongoStore = new MongodbStore({
   collection: "sessions",
 });
 
-// Passport config
-const passportInit = require("./app/config/passport");
-passportInit(passport);
-app.use(passport.initialize());
-app.use(passport.session());
-
 // session config
 app.use(
   session({
@@ -49,6 +43,11 @@ app.use(
 );
 
 app.use(flash());
+// Passport config
+const passportInit = require("./app/config/passport");
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Global middleware
 app.use((req, res, next) => {
