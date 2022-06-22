@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const ejs = require("ejs");
@@ -5,7 +7,9 @@ const expressLayout = require("express-ejs-layouts");
 const path = require("path");
 const PORT = process.env.PORT || 8080;
 const mongoose = require("mongoose");
-require("dotenv").config();
+const session = require("express-session");
+const flash = require("express-flash");
+const MongodbStore = require("connect-mongo")(session);
 
 // Database connection
 const url = process.env.MONGODB_URI;
@@ -18,6 +22,26 @@ connection
   .on("error", (err) => {
     console.log("Connection failed...");
   });
+
+// Session store
+let mongoStore = new MongodbStore({
+  mongooseConnection: connection,
+  collection: "sessions",
+});
+
+// session config
+app.use(
+  session({
+    secret: process.env.COOKIE_SECRET,
+    resave: false,
+    store: mongoStore,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 },
+    // cookie age almost equal to 24 hours here
+  })
+);
+
+app.use(flash());
 
 // Assets
 app.use(express.static("public"));

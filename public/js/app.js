@@ -93,7 +93,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log("hello app.js");
+var addToCart = document.querySelectorAll(".add-to-cart");
+addToCart.forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    console.log("clicked");
+  });
+});
 
 /***/ }),
 
