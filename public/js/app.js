@@ -5255,7 +5255,7 @@ function updateCart(pizza) {
       timeout: 1000,
       text: "Something went wrong",
       progressBar: false
-    });
+    }).show();
   });
 }
 

@@ -3,7 +3,6 @@ import Noty from "noty";
 
 let addToCart = document.querySelectorAll(".add-to-cart");
 let cartCounter = document.querySelector("#cartCounter");
-
 function updateCart(pizza) {
   axios
     .post("/update-cart", pizza)
@@ -22,7 +21,7 @@ function updateCart(pizza) {
         timeout: 1000,
         text: "Something went wrong",
         progressBar: false,
-      });
+      }).show();
     });
 }
 
