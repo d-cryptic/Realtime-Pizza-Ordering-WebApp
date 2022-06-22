@@ -25,7 +25,7 @@
     "express-session": "^1.17.1",
     "mongoose": "^6.4.0",
     "noty": "^3.2.0-beta-deprecated",
-    "passport": "^0.6.0",
+    "passport": "^0.4.1",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
