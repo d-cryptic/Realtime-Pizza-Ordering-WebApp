@@ -26,13 +26,13 @@
 			- mongoose, express-session, connect-mongo, dotenv
 		- axios to send ajax request
 		- install notification library npm i noty https://ned.im/noty/#/
-[] Create login page with route
-[] Create register page with route
-[] Build register crud
+[+] Create login page with route
+[+] Create register page with route
+[+] Build register crud
 	- dependencies express flash express-session cookie-parser dotenv
 	- status code article https://www.restapitutorial.com/httpstatuscodes.html  
 	- Database connection, dependencies mongoose
-[] Build login using passport
+[+] Build login using passport
 	- install dependencies passport passport-local express-session
 [] Create Order Controller and link it in server.js
 [] Create Orders view with table for customer and admin
@@ -44,3 +44,4 @@
 [] Socket connection
 	- dependencies socket.io
 [] Build project for deployment
+[] Deploy project on live server 
