@@ -34,8 +34,8 @@
 	- Database connection, dependencies mongoose
 [+] Build login using passport
 	- install dependencies passport passport-local express-session
-[] Create Order Controller and link it in server.js
-[] Create Orders view with table for customer and admin
+[+] Create Order Controller and link it in server.js
+[+] Create Orders view with table for customer and admin
 [] Create Orders single page with status
 [] Make order on carts page
 [] Place order functionality
