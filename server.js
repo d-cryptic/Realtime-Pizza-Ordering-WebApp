@@ -4,6 +4,20 @@ const ejs = require("ejs");
 const expressLayout = require("express-ejs-layouts");
 const path = require("path");
 const PORT = process.env.PORT || 8080;
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+// Database connection
+const url = process.env.MONGODB_URI;
+mongoose.connect(url);
+const connection = mongoose.connection;
+connection
+  .once("open", () => {
+    console.log("Database connected...");
+  })
+  .on("error", (err) => {
+    console.log("Connection failed...");
+  });
 
 // Assets
 app.use(express.static("public"));
